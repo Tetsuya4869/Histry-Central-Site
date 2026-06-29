@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import IOSNavBar from '@/components/IOSNavBar';
 import EraSection from '@/components/EraSection';
 import KeyFigureCard from '@/components/KeyFigureCard';
+import ReferencesList from '@/components/ReferencesList';
 import { countries, getCountry } from '@/data/countries';
 import { getHistory } from '@/data/histories';
 
@@ -39,7 +40,7 @@ export default function CountryPage({ params }: { params: { id: string } }) {
           <div className="text-[56px] leading-none drop-shadow-sm">
             {country.flag}
           </div>
-          <h1 className="mt-3 text-[32px] font-bold tracking-tight drop-shadow-sm">
+          <h1 className="mt-3 font-serif text-[32px] font-bold tracking-tight drop-shadow-sm">
             {country.name}
           </h1>
           <p className="mt-1 max-w-md text-[15px] leading-relaxed text-white/90">
@@ -52,12 +53,26 @@ export default function CountryPage({ params }: { params: { id: string } }) {
       </div>
 
       <main className="mx-auto max-w-3xl px-4">
-        {/* 概要 */}
+        {/* 概要（短文） */}
         <section className="ios-fade-up py-6">
           <div className="rounded-ios bg-ios-card p-4 text-[14px] leading-relaxed text-ios-text-2 shadow-ios">
             {history.intro}
           </div>
         </section>
+
+        {/* 総論（学術的・明朝体・ドロップキャップ） */}
+        {history.overview && (
+          <section className="ios-fade-up pb-6">
+            <h2 className="rule-heading mb-3 px-1 font-serif text-[15px] font-bold text-ios-text">
+              総論
+            </h2>
+            <div className="rounded-ios bg-ios-card p-5 shadow-ios">
+              <p className="prose-academic dropcap text-[15px] text-ios-text-2">
+                {history.overview}
+              </p>
+            </div>
+          </section>
+        )}
 
         {/* 主要人物 */}
         {history.figures && history.figures.length > 0 && (
@@ -80,7 +95,7 @@ export default function CountryPage({ params }: { params: { id: string } }) {
 
         {/* 時代ごとの歴史（縦タイムライン） */}
         <section className="ios-fade-up">
-          <h2 className="px-1 pb-3 text-[13px] font-semibold uppercase tracking-wide text-ios-text-3">
+          <h2 className="rule-heading mb-3 px-1 font-serif text-[15px] font-bold text-ios-text">
             時代の流れ
           </h2>
           <div>
@@ -94,6 +109,36 @@ export default function CountryPage({ params }: { params: { id: string } }) {
             ))}
           </div>
         </section>
+
+        {/* 後世への影響 */}
+        {history.legacy && (
+          <section className="ios-fade-up pt-2">
+            <h2 className="rule-heading mb-3 px-1 font-serif text-[15px] font-bold text-ios-text">
+              後世への影響
+            </h2>
+            <div className="rounded-ios bg-ios-card p-5 shadow-ios">
+              <p className="prose-academic text-[14.5px] text-ios-text-2">
+                {history.legacy}
+              </p>
+            </div>
+          </section>
+        )}
+
+        {/* 参考文献 */}
+        {history.references && history.references.length > 0 && (
+          <section className="ios-fade-up pt-6">
+            <h2 className="rule-heading mb-3 px-1 font-serif text-[15px] font-bold text-ios-text">
+              参考文献
+            </h2>
+            <div className="rounded-ios bg-ios-card p-5 shadow-ios">
+              <ReferencesList references={history.references} />
+            </div>
+            <p className="mt-3 px-1 text-[11px] leading-relaxed text-ios-text-3">
+              本ページは上記をはじめとする一般的な概説書・通史に基づく要約です。
+              年代・時代区分はわかりやすさを優先した概略を含みます。
+            </p>
+          </section>
+        )}
       </main>
     </div>
   );

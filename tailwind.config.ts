@@ -17,6 +17,18 @@ const config: Config = {
           'Arial',
           'sans-serif',
         ],
+        // 学術的・百科事典的な見出しや総論に用いる明朝体
+        serif: [
+          'Hiragino Mincho ProN',
+          'Hiragino Mincho Pro',
+          'YuMincho',
+          'Yu Mincho',
+          'Noto Serif JP',
+          'Songti SC',
+          'Georgia',
+          'Times New Roman',
+          'serif',
+        ],
       },
       borderRadius: {
         ios: '18px',

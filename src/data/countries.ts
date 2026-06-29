@@ -8,6 +8,10 @@ export type Region =
   | 'ヨーロッパ'
   | '地中海'
   | '中東'
+  | '中央ユーラシア'
+  | 'アフリカ'
+  | 'メソアメリカ'
+  | 'アンデス'
   | 'アメリカ';
 
 export interface CountrySpan {
@@ -34,6 +38,10 @@ export const REGIONS: Region[] = [
   '地中海',
   'ヨーロッパ',
   '中東',
+  '中央ユーラシア',
+  'アフリカ',
+  'メソアメリカ',
+  'アンデス',
   'アメリカ',
 ];
 
@@ -185,6 +193,107 @@ export const countries: Country[] = [
       { start: 1607, end: 1776, label: '植民地時代' },
       { start: 1776, end: 1865, label: '建国・南北戦争' },
       { start: 1865, end: 2050, label: '工業化〜超大国' },
+    ],
+  },
+  {
+    id: 'mesopotamia',
+    name: 'メソポタミア',
+    flag: '𒀭',
+    region: '中東',
+    color: '#C99A5B',
+    colorTo: '#8B5E2A',
+    summary: '文明のゆりかご。文字・法・都市が初めて生まれた肥沃な三日月地帯。',
+    spans: [
+      { start: -3500, end: -2334, label: 'シュメール都市国家' },
+      { start: -2334, end: -1595, label: 'アッカド・バビロン第1王朝' },
+      { start: -911, end: -539, label: 'アッシリア・新バビロニア' },
+    ],
+  },
+  {
+    id: 'persia',
+    name: 'ペルシア',
+    flag: '🇮🇷',
+    region: '中東',
+    color: '#2EC4B6',
+    colorTo: '#168C82',
+    summary: 'アケメネスからイランへ。多民族を束ねた寛容な大帝国の系譜。',
+    spans: [
+      { start: -550, end: -330, label: 'アケメネス朝' },
+      { start: -247, end: 224, label: 'パルティア' },
+      { start: 224, end: 651, label: 'ササン朝' },
+      { start: 1501, end: 1736, label: 'サファヴィー朝' },
+      { start: 1925, end: 2050, label: '近代イラン' },
+    ],
+  },
+  {
+    id: 'mongol',
+    name: 'モンゴル帝国',
+    flag: '🇲🇳',
+    region: '中央ユーラシア',
+    color: '#6E7F94',
+    colorTo: '#44546A',
+    summary: 'ユーラシアを席巻した史上最大の陸上帝国。東西を一つに結んだ。',
+    spans: [
+      { start: 1206, end: 1294, label: '大モンゴル帝国' },
+      { start: 1294, end: 1368, label: '諸ハン国・元' },
+    ],
+  },
+  {
+    id: 'korea',
+    name: '朝鮮',
+    flag: '🇰🇷',
+    region: '東アジア',
+    color: '#3EA8DE',
+    colorTo: '#1F6FA0',
+    summary: '中国と日本のあいだで独自の文化を磨いた半島の王朝史。',
+    spans: [
+      { start: -57, end: 668, label: '三国時代' },
+      { start: 668, end: 935, label: '統一新羅' },
+      { start: 918, end: 1392, label: '高麗' },
+      { start: 1392, end: 1910, label: '朝鮮王朝' },
+      { start: 1910, end: 2050, label: '近現代' },
+    ],
+  },
+  {
+    id: 'aztec',
+    name: 'メソアメリカ',
+    flag: '🦅',
+    region: 'メソアメリカ',
+    color: '#1FA98A',
+    colorTo: '#147A63',
+    summary: '中米に栄えた都市文明。マヤの暦とアステカの湖上都市。',
+    spans: [
+      { start: -1200, end: -400, label: 'オルメカ文明' },
+      { start: 250, end: 900, label: 'マヤ（古典期）' },
+      { start: 1345, end: 1521, label: 'アステカ帝国' },
+    ],
+  },
+  {
+    id: 'inca',
+    name: 'インカ',
+    flag: '🏔️',
+    region: 'アンデス',
+    color: '#CC7A3B',
+    colorTo: '#A65322',
+    summary: '文字なき大帝国。アンデスの空に道と石組みを張り巡らせた。',
+    spans: [
+      { start: -900, end: -200, label: 'チャビン文化' },
+      { start: 100, end: 700, label: 'モチェ・ナスカ' },
+      { start: 1438, end: 1533, label: 'インカ帝国' },
+    ],
+  },
+  {
+    id: 'mali',
+    name: 'マリ帝国',
+    flag: '🇲🇱',
+    region: 'アフリカ',
+    color: '#D4A017',
+    colorTo: '#A87D0A',
+    summary: '黄金と学問の西アフリカ。サハラ交易が育てた大帝国。',
+    spans: [
+      { start: 700, end: 1240, label: 'ガーナ王国' },
+      { start: 1235, end: 1610, label: 'マリ帝国' },
+      { start: 1464, end: 1591, label: 'ソンガイ帝国' },
     ],
   },
 ];

@@ -9,6 +9,13 @@ import { ottoman } from './ottoman';
 import { france } from './france';
 import { uk } from './uk';
 import { usa } from './usa';
+import { mesopotamia } from './mesopotamia';
+import { persia } from './persia';
+import { mongol } from './mongol';
+import { korea } from './korea';
+import { aztec } from './aztec';
+import { inca } from './inca';
+import { mali } from './mali';
 
 export const histories: Record<string, CountryHistory> = {
   japan,
@@ -21,6 +28,13 @@ export const histories: Record<string, CountryHistory> = {
   france,
   uk,
   usa,
+  mesopotamia,
+  persia,
+  mongol,
+  korea,
+  aztec,
+  inca,
+  mali,
 };
 
 export function getHistory(id: string): CountryHistory | undefined {

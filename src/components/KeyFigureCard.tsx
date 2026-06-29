@@ -18,8 +18,17 @@ export default function KeyFigureCard({
       >
         {figure.name.slice(0, 1)}
       </div>
-      <h4 className="text-[15px] font-semibold text-ios-text">{figure.name}</h4>
-      <p className="text-[12px] font-medium text-ios-blue">{figure.role}</p>
+      <h4 className="font-serif text-[15px] font-semibold text-ios-text">
+        {figure.name}
+      </h4>
+      <p className="text-[12px] font-medium text-ios-blue">
+        {figure.role}
+        {figure.years && (
+          <span className="ml-1 font-normal text-ios-text-3">
+            ・{figure.years}
+          </span>
+        )}
+      </p>
       <p className="mt-1 text-[12px] leading-snug text-ios-text-2">
         {figure.note}
       </p>

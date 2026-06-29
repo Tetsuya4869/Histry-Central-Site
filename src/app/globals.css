@@ -12,6 +12,8 @@
   --ios-text-3: #8e8e93;
   --ios-separator: rgba(60, 60, 67, 0.12);
   --ios-navbar: rgba(249, 249, 251, 0.72);
+  --font-serif: 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'YuMincho',
+    'Yu Mincho', 'Noto Serif JP', 'Songti SC', Georgia, 'Times New Roman', serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -76,6 +78,53 @@ body {
 }
 .ios-tap:active {
   transform: scale(0.97);
+}
+
+/* === 学術・百科事典的なタイポグラフィ === */
+
+/* 総論などの長文：明朝体・行間広め・先頭ドロップキャップ */
+.prose-academic {
+  font-family: var(--font-serif, serif);
+  line-height: 1.95;
+  letter-spacing: 0.01em;
+}
+.prose-academic.dropcap::first-letter {
+  float: left;
+  font-size: 3.1em;
+  line-height: 0.82;
+  padding: 0.06em 0.1em 0 0;
+  font-weight: 700;
+  color: var(--ios-text);
+}
+
+/* 引用（プルクオート） */
+.pullquote {
+  font-family: var(--font-serif, serif);
+  border-left: 3px solid var(--ios-separator);
+  padding-left: 14px;
+  font-style: italic;
+  color: var(--ios-text-2);
+}
+
+/* 史料・出典のチップ */
+.source-chip {
+  font-family: var(--font-serif, serif);
+  font-size: 11px;
+  border: 1px solid var(--ios-separator);
+  border-radius: 8px;
+  padding: 2px 8px;
+  color: var(--ios-text-2);
+}
+
+/* 罫線見出し（章扉風） */
+.rule-heading::after {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  margin-top: 8px;
+  background: currentColor;
+  opacity: 0.6;
 }
 
 @keyframes ios-fade-up {
