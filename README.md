@@ -33,10 +33,11 @@ npm run build    # out/ に静的サイトを書き出し
 初回のみ、リポジトリの **Settings → Pages → Build and deployment → Source** を
 **「GitHub Actions」** に設定してください。
 
-公開URL（プロジェクトページ）の想定：
-`https://tetsuya4869.github.io/histry-central-site/`
+公開URL（プロジェクトページ）：
+`https://tetsuya4869.github.io/Histry-Central-Site/`
 
-> リポジトリ名に合わせて `next.config.mjs` の `basePath` を `/histry-central-site` に設定しています。
+> GitHub Pages のパスは大文字小文字を区別するため、`next.config.mjs` の `basePath` を
+> リポジトリ名と完全一致する `/Histry-Central-Site` に設定しています。
 > 別のパス・独自ドメインで公開する場合はここを調整してください。
 
 ## ディレクトリ構成
