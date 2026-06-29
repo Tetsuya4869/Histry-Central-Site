@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* iOS ライトモード デザイントークン */
+  --ios-bg: #f2f2f7;
+  --ios-card: #ffffff;
+  --ios-card-2: #f7f7fa;
+  --ios-text: #1c1c1e;
+  --ios-text-2: #3a3a3c;
+  --ios-text-3: #8e8e93;
+  --ios-separator: rgba(60, 60, 67, 0.12);
+  --ios-navbar: rgba(249, 249, 251, 0.72);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* iOS ダークモード デザイントークン */
+    --ios-bg: #000000;
+    --ios-card: #1c1c1e;
+    --ios-card-2: #2c2c2e;
+    --ios-text: #ffffff;
+    --ios-text-2: #ebebf5;
+    --ios-text-3: #8e8e93;
+    --ios-separator: rgba(84, 84, 88, 0.4);
+    --ios-navbar: rgba(22, 22, 24, 0.72);
+  }
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  background: var(--ios-bg);
+  color: var(--ios-text);
+}
+
+body {
+  font-feature-settings: 'palt';
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 慣性のある横スクロール */
+.ios-scroll {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+}
+
+.ios-scroll::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.ios-scroll::-webkit-scrollbar-thumb {
+  background: var(--ios-separator);
+  border-radius: 999px;
+}
+.ios-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* フロステッドガラス */
+.ios-glass {
+  background: var(--ios-navbar);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+/* タップ時の軽い沈み込み */
+.ios-tap {
+  transition: transform 0.18s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.ios-tap:active {
+  transform: scale(0.97);
+}
+
+@keyframes ios-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.ios-fade-up {
+  animation: ios-fade-up 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
