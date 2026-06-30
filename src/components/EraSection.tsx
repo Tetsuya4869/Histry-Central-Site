@@ -1,5 +1,6 @@
 import type { Era } from '@/data/histories/types';
 import { formatYear } from '@/lib/timeline';
+import LinkedText from './LinkedText';
 
 const THEME_ICON: Record<string, string> = {
   政治: '⚖️',
@@ -41,7 +42,7 @@ export default function EraSection({
             {era.period}
           </p>
           <p className="mt-2 text-[14px] leading-relaxed text-ios-text-2">
-            {era.body}
+            <LinkedText text={era.body} />
           </p>
 
           {/* 観点別解説 */}

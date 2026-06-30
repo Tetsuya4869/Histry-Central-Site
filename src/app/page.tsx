@@ -19,6 +19,18 @@ const EXPLORE = [
     desc: '世界史の基本概念をわかりやすく',
   },
   {
+    href: '/people',
+    icon: '👥',
+    title: '人物から探す',
+    desc: '歴史を動かした人々を文明ごとに',
+  },
+  {
+    href: '/search',
+    icon: '🔍',
+    title: '検索',
+    desc: '国・人物・テーマ・用語を横断検索',
+  },
+  {
     href: '/about',
     icon: '✒️',
     title: '編集方針',

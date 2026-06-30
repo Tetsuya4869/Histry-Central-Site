@@ -41,9 +41,10 @@ export default function GlossaryList() {
             {group.terms.map((t, i) => (
               <div
                 key={t.term}
-                className={
+                id={t.term}
+                className={`scroll-mt-24 ${
                   i > 0 ? 'border-t border-[var(--ios-separator)] p-4' : 'p-4'
-                }
+                }`}
               >
                 <dt className="font-serif text-[15px] font-bold text-ios-text">
                   {t.term}
