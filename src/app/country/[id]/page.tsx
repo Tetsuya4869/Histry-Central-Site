@@ -3,8 +3,10 @@ import IOSNavBar from '@/components/IOSNavBar';
 import EraSection from '@/components/EraSection';
 import KeyFigureCard from '@/components/KeyFigureCard';
 import ReferencesList from '@/components/ReferencesList';
+import WorldMap from '@/components/WorldMap';
 import { countries, getCountry } from '@/data/countries';
 import { getHistory } from '@/data/histories';
+import { getGeo } from '@/data/geo';
 
 // 静的エクスポートのため全国分のパスを生成
 export function generateStaticParams() {
@@ -59,6 +61,21 @@ export default function CountryPage({ params }: { params: { id: string } }) {
             {history.intro}
           </div>
         </section>
+
+        {/* 位置（ロケーター地図） */}
+        {getGeo(country.id) && (
+          <section className="ios-fade-up pb-6">
+            <h2 className="rule-heading mb-3 px-1 font-serif text-[15px] font-bold text-ios-text">
+              位置
+            </h2>
+            <div className="rounded-ios bg-ios-card p-3 shadow-ios">
+              <WorldMap highlightId={country.id} />
+              <p className="mt-2 text-center text-[11px] text-ios-text-3">
+                {country.name}のおおよその中心地
+              </p>
+            </div>
+          </section>
+        )}
 
         {/* 総論（学術的・明朝体・ドロップキャップ） */}
         {history.overview && (

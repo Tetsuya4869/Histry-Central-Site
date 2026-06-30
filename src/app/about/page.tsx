@@ -85,6 +85,15 @@ export default function AboutPage() {
             </p>
           </Card>
 
+          <Card title="地図データの出典">
+            <p>
+              世界地図は <span className="font-serif">@svg-maps/world</span>
+              （Creative Commons 表示 4.0 国際ライセンス／CC BY 4.0）を利用しています。
+              地図上のハイライトとピンは各文明のおおよその中心地を示すもので、
+              歴史的な版図そのものを正確に表すものではありません。
+            </p>
+          </Card>
+
           <Card title="主な参考文献（全体）">
             <ul className="space-y-1 font-serif text-[13px]">
               <li>『詳説世界史』『世界史用語集』（山川出版社）</li>

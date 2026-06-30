@@ -2,8 +2,8 @@ import Link from 'next/link';
 import IOSNavBar from '@/components/IOSNavBar';
 import TimelineChart from '@/components/TimelineChart';
 import CountryCard from '@/components/CountryCard';
+import WorldMap from '@/components/WorldMap';
 import { countries } from '@/data/countries';
-import { themes } from '@/data/themes';
 
 const EXPLORE = [
   {
@@ -50,6 +50,19 @@ export default function HomePage() {
         {/* 横スクロール年表 */}
         <section className="ios-fade-up py-3">
           <TimelineChart />
+        </section>
+
+        {/* 世界地図 */}
+        <section className="ios-fade-up pt-4">
+          <h3 className="px-1 pb-2 text-[13px] font-semibold uppercase tracking-wide text-ios-text-3">
+            地図で見る
+          </h3>
+          <div className="rounded-ios-lg bg-ios-card p-3 shadow-ios">
+            <WorldMap />
+            <p className="mt-2 text-center text-[11px] text-ios-text-3">
+              ピンをタップで各文明の歴史へ／色は中心地の目安
+            </p>
+          </div>
         </section>
 
         {/* 読み物への導線 */}
