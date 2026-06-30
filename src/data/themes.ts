@@ -184,6 +184,176 @@ export const themes: Theme[] = [
       'aztec',
     ],
   },
+  {
+    id: 'exploration',
+    title: '大航海時代',
+    icon: '⛵',
+    tagline: '海が世界を一つにつないだ時代',
+    color: '#0AA5C9',
+    colorTo: '#0A6E8C',
+    intro:
+      '15〜17世紀、ヨーロッパの船乗りたちが大洋へ乗り出し、それまで隔てられていた大陸が初めて恒常的に結びついた。香辛料と黄金への欲望、そして信仰の拡大が原動力となり、人・作物・銀・病原菌が地球規模で移動する「世界の一体化」が始まった。',
+    sections: [
+      {
+        heading: 'イベリア半島からの船出',
+        body: 'ポルトガルがアフリカ西岸からインド航路を開き、スペインはコロンブスを西へ送って「新大陸」に到達した。トルデシリャス条約で両国は世界を二分し、最初の地球規模の帝国を築いた。',
+        relatedCountryIds: ['spain'],
+      },
+      {
+        heading: '新大陸とコロンブスの交換',
+        body: '征服者（コンキスタドール）がアステカ・インカを滅ぼし、銀山と先住民労働力が世界経済に組み込まれた。トウモロコシ・ジャガイモが世界へ、馬・病原菌が新大陸へ渡る「コロンブスの交換」が起きた。',
+        relatedCountryIds: ['spain', 'aztec', 'inca'],
+      },
+      {
+        heading: 'アジアの海と香辛料',
+        body: '東南アジアの香辛料を求めて、ヨーロッパ勢はインド洋・南シナ海の交易網に参入した。明の鄭和の大遠征はそれに先立つ壮挙であり、海の道は東西交流の大動脈であり続けた。',
+        relatedCountryIds: ['southeast_asia', 'china', 'india', 'ottoman'],
+      },
+    ],
+    relatedCountryIds: [
+      'spain',
+      'uk',
+      'france',
+      'aztec',
+      'inca',
+      'southeast_asia',
+      'china',
+    ],
+  },
+  {
+    id: 'industrial',
+    title: '産業革命',
+    icon: '⚙️',
+    tagline: '機械が世界を作り変えた',
+    color: '#6E7681',
+    colorTo: '#454C54',
+    intro:
+      '18世紀後半、イギリスに始まった機械化と工場制は、人類が初めて経験する持続的な経済成長をもたらした。蒸気機関と石炭が生産力を飛躍させ、都市・階級・国家のあり方を根底から変え、近代世界の物質的基盤を築いた。',
+    sections: [
+      {
+        heading: 'イギリスから始まった',
+        body: '豊富な石炭、海外市場、資本と労働力が揃ったイギリスで、綿工業と蒸気機関を軸に産業革命が始まった。「世界の工場」として圧倒的な経済力を握った。',
+        relatedCountryIds: ['uk'],
+      },
+      {
+        heading: '世界への波及',
+        body: '工業化はドイツ・アメリカへ広がり、両国は19世紀末に新興工業国として台頭した。アジアでは日本が明治維新後にいち早く産業化を遂げ、非西洋圏の例外となった。',
+        relatedCountryIds: ['germany', 'usa', 'france', 'japan'],
+      },
+      {
+        heading: '光と影',
+        body: '生産力の増大は労働者階級と都市問題、社会主義思想を生んだ。同時に、原料と市場を求める工業国の膨張は、後の帝国主義と植民地支配を加速させた。',
+        relatedCountryIds: ['uk', 'india'],
+      },
+    ],
+    relatedCountryIds: ['uk', 'germany', 'usa', 'japan', 'france', 'india'],
+  },
+  {
+    id: 'imperialism',
+    title: '帝国主義と脱植民地化',
+    icon: '🌐',
+    tagline: '世界の分割と、独立への長い道',
+    color: '#C98A2E',
+    colorTo: '#9A6418',
+    intro:
+      '工業化した列強は、19世紀後半に原料・市場・威信を求めてアジア・アフリカをほぼ残らず分割した。だが植民地支配は同時に、近代教育とナショナリズムを通じて、20世紀の独立運動という反作用を生み出した。',
+    sections: [
+      {
+        heading: '世界の分割',
+        body: 'イギリス・フランスを筆頭に、列強はアフリカを地図上で分割し、アジアの大半を植民地・勢力圏に組み込んだ。かつての大帝国スペインも新大陸の植民地を長く維持した。',
+        relatedCountryIds: ['uk', 'france', 'spain'],
+      },
+      {
+        heading: '抵抗と独立',
+        body: 'インドのガンディーに代表される非暴力運動、東南アジアやアフリカの民族運動が独立を求めた。第二次大戦後、植民地は次々と主権国家として独立を達成した。',
+        relatedCountryIds: ['india', 'southeast_asia', 'mali'],
+      },
+      {
+        heading: '残された課題',
+        body: '恣意的に引かれた国境、経済的従属、民族対立など、植民地支配の遺産は独立後も新興国を苦しめた。「南北問題」は現代世界の構造的課題であり続けている。',
+        relatedCountryIds: ['india', 'mali', 'southeast_asia'],
+      },
+    ],
+    relatedCountryIds: [
+      'uk',
+      'france',
+      'spain',
+      'india',
+      'southeast_asia',
+      'mali',
+    ],
+  },
+  {
+    id: 'worldwars',
+    title: '二つの世界大戦',
+    icon: '⚔️',
+    tagline: '20世紀を引き裂いた総力戦',
+    color: '#D7453A',
+    colorTo: '#A01810',
+    intro:
+      '20世紀前半、ナショナリズム・帝国主義・同盟網のもつれが、史上初の「世界規模の総力戦」を二度引き起こした。国家の全資源を動員する戦争は数千万の命を奪い、世界の勢力図と価値観を一変させた。',
+    sections: [
+      {
+        heading: '第一次世界大戦',
+        body: 'バルカンの火種から始まった大戦は、塹壕戦と新兵器による未曾有の消耗戦となった。ドイツ帝国・オスマン帝国・ロシア帝国が崩壊し、ヨーロッパの没落とアメリカの台頭を決定づけた。',
+        relatedCountryIds: ['germany', 'france', 'uk', 'ottoman', 'russia'],
+      },
+      {
+        heading: '戦間期とファシズム',
+        body: '世界恐慌のなか、ドイツではナチスが台頭し、日本も大陸侵攻を進めた。ヴェルサイユ体制の不安定さと全体主義の拡大が、次の大戦への道を開いた。',
+        relatedCountryIds: ['germany', 'japan'],
+      },
+      {
+        heading: '第二次世界大戦',
+        body: 'ヨーロッパとアジア・太平洋で同時に戦われた大戦は、ホロコーストと原爆という悲劇を生んだ。連合国の勝利は植民地帝国の終焉と米ソ二極時代の幕開けをもたらした。',
+        relatedCountryIds: ['germany', 'japan', 'usa', 'uk', 'russia', 'france'],
+      },
+    ],
+    relatedCountryIds: [
+      'germany',
+      'france',
+      'uk',
+      'russia',
+      'usa',
+      'japan',
+      'ottoman',
+    ],
+  },
+  {
+    id: 'coldwar',
+    title: '冷戦',
+    icon: '❄️',
+    tagline: '核の影のもとの半世紀',
+    color: '#4F6D9C',
+    colorTo: '#32486E',
+    intro:
+      '第二次大戦後、アメリカとソ連という二つの超大国が、直接戦火を交えないまま世界を二分して対峙した。核兵器の恐怖、イデオロギーの対立、代理戦争が、約半世紀にわたり国際政治を規定した。',
+    sections: [
+      {
+        heading: '二極化する世界',
+        body: '資本主義の西側と社会主義の東側が、軍事同盟（NATO・ワルシャワ条約機構）と核軍拡で対峙した。直接戦争を避けつつ世界規模で影響圏を争った。',
+        relatedCountryIds: ['usa', 'russia'],
+      },
+      {
+        heading: '分断の最前線',
+        body: 'ドイツはベルリンの壁で東西に分かたれ、朝鮮半島は戦争を経て南北に分断された。これらは冷戦の対立を地上に刻んだ象徴であった。',
+        relatedCountryIds: ['germany', 'korea'],
+      },
+      {
+        heading: '代理戦争と終焉',
+        body: 'ベトナムなどアジアで熱戦が戦われる一方、中国は独自路線を歩んだ。1989年の東欧革命とソ連の崩壊で冷戦は終わり、世界は新たな秩序を模索することになった。',
+        relatedCountryIds: ['southeast_asia', 'china', 'russia'],
+      },
+    ],
+    relatedCountryIds: [
+      'usa',
+      'russia',
+      'germany',
+      'korea',
+      'china',
+      'southeast_asia',
+    ],
+  },
 ];
 
 export function getTheme(id: string): Theme | undefined {

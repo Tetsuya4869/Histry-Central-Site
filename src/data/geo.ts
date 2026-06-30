@@ -28,6 +28,11 @@ export const geo: Record<string, CivGeo> = {
   aztec: { iso: 'mx', x: 187.1, y: 394.1 },
   inca: { iso: 'pe', x: 264.4, y: 489 },
   mali: { iso: 'ml', x: 463.6, y: 412.7 },
+  russia: { iso: 'ru', x: 769.4, y: 187.8 },
+  germany: { iso: 'de', x: 504.2, y: 295.3 },
+  spain: { iso: 'es', x: 455.5, y: 354.7 },
+  caliphate: { iso: 'sa', x: 601.5, y: 392.4 },
+  southeast_asia: { iso: 'id', x: 806.3, y: 470 },
 };
 
 export function getGeo(id: string): CivGeo | undefined {

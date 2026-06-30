@@ -4,8 +4,10 @@
 
 export type Region =
   | '東アジア'
+  | '東南アジア'
   | '南アジア'
   | 'ヨーロッパ'
+  | '東欧・ロシア'
   | '地中海'
   | '中東'
   | '中央ユーラシア'
@@ -34,9 +36,11 @@ export interface Country {
 
 export const REGIONS: Region[] = [
   '東アジア',
+  '東南アジア',
   '南アジア',
   '地中海',
   'ヨーロッパ',
+  '東欧・ロシア',
   '中東',
   '中央ユーラシア',
   'アフリカ',
@@ -294,6 +298,83 @@ export const countries: Country[] = [
       { start: 700, end: 1240, label: 'ガーナ王国' },
       { start: 1235, end: 1610, label: 'マリ帝国' },
       { start: 1464, end: 1591, label: 'ソンガイ帝国' },
+    ],
+  },
+  {
+    id: 'caliphate',
+    name: 'イスラーム帝国',
+    flag: '🕌',
+    region: '中東',
+    color: '#16A085',
+    colorTo: '#0E7059',
+    summary: 'アラビアから三大陸へ。コーランと学問が結んだ大帝国。',
+    spans: [
+      { start: 632, end: 661, label: '正統カリフ時代' },
+      { start: 661, end: 750, label: 'ウマイヤ朝' },
+      { start: 750, end: 1258, label: 'アッバース朝' },
+    ],
+  },
+  {
+    id: 'germany',
+    name: 'ドイツ',
+    flag: '🇩🇪',
+    region: 'ヨーロッパ',
+    color: '#566273',
+    colorTo: '#39434F',
+    summary: '神聖ローマ帝国から統一国家へ。哲学と科学、二つの大戦の震源。',
+    spans: [
+      { start: 962, end: 1806, label: '神聖ローマ帝国' },
+      { start: 1701, end: 1871, label: 'プロイセンの台頭' },
+      { start: 1871, end: 1918, label: 'ドイツ帝国' },
+      { start: 1919, end: 1945, label: 'ヴァイマル〜ナチス' },
+      { start: 1949, end: 2050, label: '分断と統一' },
+    ],
+  },
+  {
+    id: 'spain',
+    name: 'スペイン',
+    flag: '🇪🇸',
+    region: 'ヨーロッパ',
+    color: '#CC3B47',
+    colorTo: '#9E2530',
+    summary: 'レコンキスタと大航海。太陽の沈まぬ最初の世界帝国。',
+    spans: [
+      { start: 418, end: 711, label: '西ゴート王国' },
+      { start: 711, end: 1492, label: 'アル＝アンダルス（イスラム期）' },
+      { start: 1492, end: 1898, label: 'スペイン帝国' },
+      { start: 1898, end: 2050, label: '近現代' },
+    ],
+  },
+  {
+    id: 'russia',
+    name: 'ロシア',
+    flag: '🇷🇺',
+    region: '東欧・ロシア',
+    color: '#5B6BB0',
+    colorTo: '#374488',
+    summary: 'キエフ・ルーシからソ連、そして連邦へ。ユーラシアの巨大国家。',
+    spans: [
+      { start: 882, end: 1240, label: 'キエフ・ルーシ' },
+      { start: 1283, end: 1547, label: 'モスクワ大公国' },
+      { start: 1547, end: 1917, label: 'ロシア帝国' },
+      { start: 1922, end: 1991, label: 'ソビエト連邦' },
+      { start: 1991, end: 2050, label: 'ロシア連邦' },
+    ],
+  },
+  {
+    id: 'southeast_asia',
+    name: '東南アジア',
+    flag: '🛕',
+    region: '東南アジア',
+    color: '#E08A2E',
+    colorTo: '#B5611C',
+    summary: 'アンコールと海の交易帝国。インドと中国が交わる十字路。',
+    spans: [
+      { start: 100, end: 550, label: '扶南・初期国家' },
+      { start: 650, end: 1377, label: 'シュリーヴィジャヤ' },
+      { start: 802, end: 1431, label: 'アンコール朝（クメール）' },
+      { start: 1293, end: 1527, label: 'マジャパヒト王国' },
+      { start: 1511, end: 2050, label: '植民地〜近現代' },
     ],
   },
 ];
