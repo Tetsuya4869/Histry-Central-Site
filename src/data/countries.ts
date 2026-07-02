@@ -202,7 +202,7 @@ export const countries: Country[] = [
   {
     id: 'mesopotamia',
     name: 'メソポタミア',
-    flag: '𒀭',
+    flag: '🏺',
     region: '中東',
     color: '#C99A5B',
     colorTo: '#8B5E2A',

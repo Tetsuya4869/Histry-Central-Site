@@ -161,6 +161,7 @@ export const japan: CountryHistory = {
         { year: 1945, text: '第二次世界大戦の敗戦' },
         { year: 1964, text: '東京オリンピック、高度経済成長' },
       ],
+      sources: ['大日本帝国憲法', '日本国憲法'],
     },
   ],
   figures: [

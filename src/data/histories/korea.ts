@@ -138,6 +138,7 @@ export const korea: CountryHistory = {
         { year: 1950, text: '朝鮮戦争が勃発（〜1953年休戦）' },
         { year: 1987, text: '韓国で民主化が実現' },
       ],
+      sources: ['三・一独立宣言', '大韓民国憲法'],
     },
   ],
   figures: [

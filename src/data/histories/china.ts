@@ -149,6 +149,7 @@ export const china: CountryHistory = {
         { year: 1949, text: '中華人民共和国の成立' },
         { year: 1978, text: '改革開放路線へ転換' },
       ],
+      sources: ['中華民国臨時約法', '中華人民共和国憲法'],
     },
   ],
   figures: [

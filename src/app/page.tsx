@@ -109,9 +109,11 @@ export default function HomePage() {
             国・文明から探す（{countries.length}）
           </h3>
           <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-            {countries.map((c) => (
-              <CountryCard key={c.id} country={c} />
-            ))}
+            {[...countries]
+              .sort((a, b) => a.spans[0].start - b.spans[0].start)
+              .map((c) => (
+                <CountryCard key={c.id} country={c} />
+              ))}
           </div>
         </section>
 

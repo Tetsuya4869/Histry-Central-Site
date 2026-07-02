@@ -30,7 +30,7 @@ export default function SearchClient() {
   return (
     <div>
       {/* 検索バー */}
-      <div className="ios-fade-up sticky top-14 z-20 -mx-4 bg-ios-bg/80 px-4 pb-3 pt-1 backdrop-blur">
+      <div className="ios-fade-up ios-glass sticky top-14 z-20 -mx-4 px-4 pb-3 pt-1">
         <div className="flex items-center gap-2 rounded-[12px] bg-ios-card-2 px-3 py-2.5">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
             <circle
