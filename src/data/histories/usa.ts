@@ -28,8 +28,10 @@ export const usa: CountryHistory = {
       events: [
         { year: 1607, text: 'ジェームズタウン建設' },
         { year: 1620, text: 'メイフラワー号の到着、メイフラワー誓約' },
+        { year: 1754, text: 'フレンチ・インディアン戦争の開始' },
         { year: 1765, text: '印紙法の制定と反発' },
         { year: 1773, text: 'ボストン茶会事件' },
+        { year: 1775, text: 'レキシントン・コンコードの戦い、独立戦争の開始' },
       ],
       sources: ['メイフラワー誓約', 'コモン・センス（トマス・ペイン）'],
     },
@@ -54,6 +56,8 @@ export const usa: CountryHistory = {
       events: [
         { year: 1776, text: '独立宣言' },
         { year: 1787, text: '合衆国憲法の制定' },
+        { year: 1803, text: 'フランスからルイジアナを購入、領土が倍増' },
+        { year: 1823, text: 'モンロー宣言、米欧相互不干渉を表明' },
         { year: 1861, text: '南北戦争の勃発' },
         { year: 1863, text: '奴隷解放宣言、ゲティスバーグ演説' },
       ],
@@ -82,10 +86,13 @@ export const usa: CountryHistory = {
         },
       ],
       events: [
+        { year: 1869, text: '大陸横断鉄道の完成' },
         { year: 1929, text: '世界恐慌' },
+        { year: 1941, text: '真珠湾攻撃、第二次世界大戦に参戦' },
         { year: 1945, text: '第二次世界大戦の勝利' },
         { year: 1964, text: '公民権法の制定' },
         { year: 1969, text: 'アポロ11号の月面着陸' },
+        { year: 2001, text: '9.11同時多発テロ、対テロ戦争の時代へ' },
       ],
       sources: [
         'ゲティスバーグ演説',
@@ -95,6 +102,12 @@ export const usa: CountryHistory = {
     },
   ],
   figures: [
+    {
+      name: 'フランクリン',
+      role: '政治家・科学者',
+      years: '1706–1790',
+      note: '避雷針を発明し、独立宣言・憲法制定に関わった建国の父',
+    },
     {
       name: 'ワシントン',
       role: '初代大統領',
@@ -112,6 +125,12 @@ export const usa: CountryHistory = {
       role: '大統領',
       years: '1809–1865（在任1861–1865）',
       note: '南北戦争で連邦を守り奴隷を解放',
+    },
+    {
+      name: 'エジソン',
+      role: '発明家',
+      years: '1847–1931',
+      note: '白熱電球・蓄音機など数多くの発明で電化時代を切り開いた',
     },
     {
       name: 'フランクリン・ローズヴェルト',

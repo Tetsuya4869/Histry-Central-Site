@@ -27,6 +27,7 @@ export const korea: CountryHistory = {
       ],
       events: [
         { year: 372, text: '高句麗に仏教が公伝し、太学が設けられる' },
+        { year: 414, text: '長寿王が父・広開土王の勲功を記した広開土王碑を建てる' },
         { year: 612, text: '高句麗が隋の大軍を撃退（薩水の戦い）' },
         { year: 660, text: '新羅・唐連合軍が百済を滅ぼす' },
         { year: 668, text: '新羅・唐連合軍が高句麗を滅ぼす' },
@@ -53,6 +54,7 @@ export const korea: CountryHistory = {
       ],
       events: [
         { year: 676, text: '新羅が唐軍を退け、半島の統一をほぼ達成' },
+        { year: 698, text: '大祚栄が渤海を建国（南北国時代へ）' },
         { year: 751, text: '仏国寺・石窟庵の造営が始まる（伝承）' },
         { year: 828, text: '張保皐が清海鎮を設け黄海交易を掌握' },
         { year: 900, text: '後百済・後高句麗が分立し後三国時代へ' },
@@ -82,6 +84,7 @@ export const korea: CountryHistory = {
         { year: 958, text: '科挙制度を導入' },
         { year: 1170, text: '武臣のクーデタにより武臣政権が成立' },
         { year: 1231, text: 'モンゴルの第一次侵攻が始まる' },
+        { year: 1251, text: '外敵調伏を祈願した八万大蔵経（高麗大蔵経）の彫造が完成' },
         { year: 1377, text: '金属活字で『直指心体要節』が印刷される' },
       ],
       sources: ['『高麗史』', '『三国史記』金富軾'],
@@ -135,6 +138,7 @@ export const korea: CountryHistory = {
         { year: 1910, text: '日本が大韓帝国を併合' },
         { year: 1919, text: '三・一独立運動' },
         { year: 1945, text: '日本の敗戦により解放、南北分断へ' },
+        { year: 1948, text: '大韓民国と朝鮮民主主義人民共和国がそれぞれ成立' },
         { year: 1950, text: '朝鮮戦争が勃発（〜1953年休戦）' },
         { year: 1987, text: '韓国で民主化が実現' },
       ],
@@ -142,6 +146,12 @@ export const korea: CountryHistory = {
     },
   ],
   figures: [
+    {
+      name: '広開土王',
+      role: '高句麗第19代王',
+      years: '在位391–412',
+      note: '高句麗の版図を大きく広げた征服王。事績は広開土王碑に刻まれた',
+    },
     {
       name: '王建（太祖）',
       role: '高麗初代王',
@@ -165,6 +175,12 @@ export const korea: CountryHistory = {
       role: '朝鮮初代王',
       years: '1335–1408',
       note: '高麗を倒し朝鮮王朝を開いた',
+    },
+    {
+      name: '丁若鏞（茶山）',
+      role: '実学者・官僚',
+      years: '1762–1836',
+      note: '朝鮮後期の実学を大成し、『牧民心書』など行政・経世の著作を残した',
     },
   ],
   legacy:

@@ -27,10 +27,13 @@ export const greece: CountryHistory = {
       ],
       events: [
         { year: -776, text: '第1回オリンピア祭（伝承）' },
+        { year: -594, text: 'ソロンの改革（財産政治と債務奴隷の廃止）' },
         { year: -508, text: 'クレイステネスの改革、民主政の基礎' },
+        { year: -490, text: 'マラトンの戦いでペルシア軍を撃破' },
         { year: -480, text: 'サラミスの海戦でペルシアを撃退' },
         { year: -431, text: 'ペロポネソス戦争の勃発' },
         { year: -399, text: 'ソクラテスの刑死' },
+        { year: -338, text: 'カイロネイアの戦い、マケドニアがギリシアを制圧' },
       ],
       sources: [
         'ヘロドトス『歴史』',
@@ -61,6 +64,8 @@ export const greece: CountryHistory = {
         { year: -334, text: 'アレクサンドロスの東方遠征' },
         { year: -331, text: 'ガウガメラの戦い、アケメネス朝撃破' },
         { year: -323, text: 'アレクサンドロス大王の死' },
+        { year: -301, text: 'イプソスの戦い、ディアドコイによる帝国分割が確定へ' },
+        { year: -212, text: 'シラクサ陥落、アルキメデスが落命' },
         { year: -146, text: 'ローマがギリシアを支配下に' },
       ],
       sources: [
@@ -76,6 +81,18 @@ export const greece: CountryHistory = {
       role: '政治家',
       years: 'BC495頃–BC429',
       note: 'アテネ民主政の黄金期を指導',
+    },
+    {
+      name: 'ヘロドトス',
+      role: '歴史家',
+      years: 'BC484頃–BC425頃',
+      note: 'ペルシア戦争を描いた『歴史』の著者。「歴史の父」と称される',
+    },
+    {
+      name: 'トゥキディデス',
+      role: '歴史家',
+      years: 'BC460頃–BC400頃',
+      note: 'ペロポネソス戦争を実証的に叙述し、科学的歴史学の先駆となった',
     },
     {
       name: 'ソクラテス',
@@ -100,6 +117,12 @@ export const greece: CountryHistory = {
       role: '大王',
       years: 'BC356–BC323',
       note: '東西にまたがる大帝国を築いた',
+    },
+    {
+      name: 'アルキメデス',
+      role: '数学者・物理学者',
+      years: 'BC287頃–BC212',
+      note: '浮力の原理やてこの原理を発見したヘレニズム科学の巨人',
     },
   ],
   legacy:

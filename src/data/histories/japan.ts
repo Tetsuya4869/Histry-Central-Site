@@ -26,9 +26,12 @@ export const japan: CountryHistory = {
         },
       ],
       events: [
+        { year: -10000, text: '縄文時代が始まる（世界最古級の土器文化）' },
         { year: -300, text: '水稲耕作と鉄器・青銅器が伝来し弥生時代へ' },
         { year: 57, text: '倭の奴国王が後漢に朝貢し金印を授かる' },
+        { year: 107, text: '倭国王帥升が後漢に生口を献上' },
         { year: 239, text: '邪馬台国の卑弥呼が魏に遣使' },
+        { year: 248, text: '卑弥呼の死去（この頃）、倭国が再び乱れる' },
       ],
       sources: ['『漢書』地理志', '『後漢書』東夷伝', '『魏志』倭人伝'],
     },
@@ -53,7 +56,9 @@ export const japan: CountryHistory = {
       events: [
         { year: 538, text: '仏教公伝（諸説あり）' },
         { year: 604, text: '十七条憲法の制定' },
+        { year: 607, text: '小野妹子を遣隋使として派遣' },
         { year: 645, text: '大化の改新が始まる' },
+        { year: 663, text: '白村江の戦いで唐・新羅連合軍に敗北' },
         { year: 701, text: '大宝律令の完成' },
       ],
       sources: ['『日本書紀』', '『隋書』倭国伝'],
@@ -78,8 +83,10 @@ export const japan: CountryHistory = {
       ],
       events: [
         { year: 710, text: '平城京へ遷都' },
+        { year: 752, text: '東大寺大仏の開眼供養' },
         { year: 794, text: '平安京へ遷都' },
         { year: 894, text: '遣唐使の廃止' },
+        { year: 1086, text: '白河上皇が院政を開始' },
         { year: 1167, text: '平清盛が太政大臣に' },
       ],
       sources: ['『古事記』', '『万葉集』', '『源氏物語』', '『延喜式』'],
@@ -105,6 +112,7 @@ export const japan: CountryHistory = {
       events: [
         { year: 1192, text: '源頼朝が征夷大将軍に' },
         { year: 1274, text: '元寇（文永の役）' },
+        { year: 1333, text: '鎌倉幕府の滅亡、建武の新政へ' },
         { year: 1467, text: '応仁の乱、戦国時代へ' },
         { year: 1543, text: '鉄砲伝来' },
         { year: 1590, text: '豊臣秀吉が天下統一' },
@@ -131,8 +139,10 @@ export const japan: CountryHistory = {
       ],
       events: [
         { year: 1603, text: '徳川家康が江戸幕府を開く' },
+        { year: 1637, text: '島原の乱（キリシタン弾圧の徹底へ）' },
         { year: 1639, text: '鎖国体制の完成' },
         { year: 1853, text: 'ペリー来航、翌年開国' },
+        { year: 1858, text: '日米修好通商条約の締結' },
         { year: 1867, text: '大政奉還' },
       ],
       sources: ['『武家諸法度』', '『徳川実紀』'],
@@ -158,13 +168,21 @@ export const japan: CountryHistory = {
       events: [
         { year: 1889, text: '大日本帝国憲法の発布' },
         { year: 1904, text: '日露戦争' },
+        { year: 1931, text: '満州事変、軍部の台頭が進む' },
         { year: 1945, text: '第二次世界大戦の敗戦' },
+        { year: 1951, text: 'サンフランシスコ平和条約の調印、翌年主権回復' },
         { year: 1964, text: '東京オリンピック、高度経済成長' },
       ],
       sources: ['大日本帝国憲法', '日本国憲法'],
     },
   ],
   figures: [
+    {
+      name: '卑弥呼',
+      role: '邪馬台国の女王',
+      years: '生年不詳–248頃',
+      note: '鬼道で衆を惑わしたと伝わる倭の女王。魏に遣使し「親魏倭王」の称号を得た',
+    },
     {
       name: '聖徳太子',
       role: '摂政',
@@ -178,6 +196,12 @@ export const japan: CountryHistory = {
       note: '世界最古級の長編小説『源氏物語』の作者',
     },
     {
+      name: '源頼朝',
+      role: '鎌倉幕府初代将軍',
+      years: '1147–1199',
+      note: '鎌倉に幕府を開き、約700年続く武家政権の礎を築いた',
+    },
+    {
       name: '織田信長',
       role: '武将',
       years: '1534–1582',
@@ -188,6 +212,12 @@ export const japan: CountryHistory = {
       role: '将軍',
       years: '1543–1616',
       note: '江戸幕府を開き泰平の世を築いた',
+    },
+    {
+      name: '福澤諭吉',
+      role: '思想家・教育者',
+      years: '1835–1901',
+      note: '『学問のすゝめ』で独立自尊を説き、慶應義塾を創設して近代化を啓蒙',
     },
   ],
   legacy:
