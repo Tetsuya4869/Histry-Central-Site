@@ -1,6 +1,8 @@
 // 「テーマで読む世界史」——文明を横断する編集視点のエッセイ。
 // relatedCountryIds は countries.ts / histories の id と一致させる（内部リンク）。
 
+import type { Reference } from './histories/types';
+
 export interface ThemeSection {
   heading: string;
   body: string;
@@ -17,6 +19,7 @@ export interface Theme {
   intro: string;
   sections: ThemeSection[];
   relatedCountryIds: string[];
+  references?: Reference[];
 }
 
 export const themes: Theme[] = [
@@ -429,6 +432,175 @@ export const themes: Theme[] = [
       'india',
     ],
   },
+  {
+    id: 'climate-environment',
+    title: '気候と環境の世界史',
+    icon: '🌿',
+    tagline: '自然との関わりから、社会の選択を読み直す',
+    color: '#32846B',
+    colorTo: '#185443',
+    intro:
+      '川の氾濫、森林の利用、寒冷化、化石燃料。人々は自然環境に適応するだけでなく、農業や都市建設によって環境そのものを変えてきた。ただし、気候の変動だけで王朝の滅亡や戦争を説明することはできない。同じ災害でも、土地制度、備蓄、交易、政治への信頼によって被害は異なる。環境史は自然と社会の相互作用をたどり、人々にどのような選択肢があったのかを考える視点である。',
+    sections: [
+      {
+        heading: '川を利用する社会——灌漑と共同作業',
+        body: 'ナイル川の定期的な増水は耕地に肥沃な土をもたらし、メソポタミアでは水路の建設と維持が農業を支えた。灌漑は収穫を増やす一方、水の配分や労働の組織化を課題にした。乾燥地では排水条件によって塩類が土壌に蓄積する問題も起こる。水利施設と国家権力は密接に関わったが、灌漑が必ず専制国家を生むという単純な図式では、村落や都市ごとの多様な運営を捉えられない。',
+        relatedCountryIds: ['egypt', 'mesopotamia', 'china'],
+      },
+      {
+        heading: '森林・燃料・土地利用——成長の代価',
+        body: '都市の建築、製鉄、船の建造には大量の木材が必要だった。森林の利用は耕地の拡大とも結びつき、地域によっては土壌流出や燃料不足を招いた。一方で、入会地の慣行や植林、伐採規制など、資源を維持する制度も作られた。江戸時代の日本でも森林管理が進んだが、利用や管理の実態には地域差があった。過去の社会を一律に自然と調和した存在とみなすことも、破壊だけで描くことも適切ではない。',
+        relatedCountryIds: ['japan', 'uk', 'rome'],
+      },
+      {
+        heading: '寒冷化と危機——気候は何を説明するか',
+        body: 'おおむね中世末期から19世紀にかけて、北半球の一部では「小氷期」と呼ばれる寒冷な時期が見られた。17世紀には不作や飢饉が戦争・重税・疫病と重なり、明末の中国やヨーロッパで社会不安を深めた。ただし、寒冷化の時期と程度は地域によって異なり、気候から政治変動へ一直線の因果関係を置くことはできない。救済制度や穀物流通が危機を緩和した場合にも目を向ける必要がある。',
+        relatedCountryIds: ['china', 'france', 'germany'],
+      },
+      {
+        heading: '石炭と石油——エネルギーの転換',
+        body: 'イギリスの産業化では石炭が重要な動力源となり、蒸気機関と工場生産が拡大した。20世紀には石油を使う自動車や航空機が移動と戦争を変えた。化石燃料は生産力を高める一方、鉱山労働の危険、大気汚染、採掘地での対立を伴った。大気中の温室効果ガスの蓄積も、この長い過程と結びつく。利益と負担が誰に配分されたかを問うことが、エネルギー史を理解する鍵となる。',
+        relatedCountryIds: ['uk', 'usa', 'persia'],
+      },
+      {
+        heading: '環境問題の国際化——共通の課題、異なる責任',
+        body: '戦後の経済成長は生活を変えたが、水俣病などの公害も生んだ。住民運動や科学者の調査は規制と補償を求める力となった。1972年の国連人間環境会議、1992年の地球サミットを経て、環境問題は国際政治の主要課題になった。歴史的な排出量、貧困からの脱却、資源への依存は国ごとに異なる。国境を越える協力と、被害を受ける地域の意思をどう両立させるかという問いは続いている。',
+        relatedCountryIds: ['japan', 'usa', 'india'],
+      },
+    ],
+    relatedCountryIds: ['egypt', 'mesopotamia', 'china', 'japan', 'uk', 'france', 'germany', 'usa', 'persia', 'india'],
+    references: [
+      { title: 'Global Crisis: War, Climate Change and Catastrophe in the Seventeenth Century', author: 'Geoffrey Parker', publisher: 'Yale University Press' },
+      { title: 'Something New Under the Sun: An Environmental History of the Twentieth-Century World', author: 'J. R. McNeill', publisher: 'W. W. Norton' },
+    ],
+  },
+  {
+    id: 'food-crops',
+    title: '食べ物と作物の世界史',
+    icon: '🌽',
+    tagline: '食卓の向こうにある、交易・労働・支配の歴史',
+    color: '#BF7930',
+    colorTo: '#87501D',
+    intro:
+      'パン、米、ジャガイモ、砂糖、茶。身近な食べ物には、数千年にわたる栽培の工夫と、大陸を越えた移動の歴史が刻まれている。作物の伝播は食生活や人口を変えたが、その背後には征服、強制労働、土地の収奪もあった。何を誰が作り、誰が食べられたのか。食の世界史は、日々の暮らしを世界規模の経済や権力と結びつける。',
+    sections: [
+      {
+        heading: '栽培化と定住——一つではなかった農業の起源',
+        body: '西アジアのムギ、中国のアワ・キビやイネ、メソアメリカのトウモロコシ、アンデスのジャガイモなど、作物の栽培化は複数の地域で進んだ。農耕への移行は長い過程であり、狩猟・採集や牧畜も併存した。収穫物の貯蔵は人口集中や分業を支えた一方、食料の偏り、労働負担、富の格差を伴う場合もあった。農業を人類が一斉に登った単一の進歩段階として見ることはできない。',
+        relatedCountryIds: ['mesopotamia', 'china', 'aztec', 'inca'],
+      },
+      {
+        heading: '香辛料と海の交易——味覚が結ぶ遠隔地',
+        body: 'コショウやクローブなどはインド洋の港を経由して運ばれ、アジア・アラブ・アフリカの商人が交易を担った。香辛料には料理、薬、贈答などの用途があり、高価な品は富や地位の表現ともなった。15世紀末以降のポルトガルの進出は、すでに存在した交易網に軍事力を持ち込んだ出来事でもある。食材の流通はヨーロッパ人の航海によって初めて始まったわけではない。',
+        relatedCountryIds: ['india', 'southeast_asia', 'caliphate', 'portugal', 'swahili'],
+      },
+      {
+        heading: 'コロンブスの交換——作物の移動と征服',
+        body: '1492年以降、大西洋を越えて生物の移動が拡大した。アメリカ大陸原産のトウモロコシやジャガイモ、トウガラシは各地に定着し、旧大陸からはムギ、サトウキビ、家畜などが運ばれた。新作物は地域の農業や料理を変えたが、土地の収奪と疫病は先住民社会に甚大な損失を与えた。「交換」という語は対等な取引だけを意味せず、征服に伴う著しく不均衡な過程も含んでいる。',
+        relatedCountryIds: ['spain', 'portugal', 'aztec', 'inca', 'china'],
+      },
+      {
+        heading: '砂糖と茶——大量消費を支えた労働',
+        body: '近世から近代にかけて、砂糖はヨーロッパで広く消費されるようになった。カリブ海やブラジルのサトウキビ農園を支えたのは、奴隷化され大西洋を渡らされたアフリカの人々の労働だった。茶やコーヒーの消費も、植民地経済や交易の拡大と結びついた。商品としての甘さや日常の楽しみと、生産現場の暴力は同じ歴史の中にある。消費地だけでなく、生産者の経験を含めて見る必要がある。',
+        relatedCountryIds: ['uk', 'france', 'portugal', 'india', 'china'],
+      },
+      {
+        heading: '飢饉と食料への権利——収穫量だけでは語れない',
+        body: '19世紀のアイルランドではジャガイモの病害が大飢饉を引き起こし、死と大規模な移住をもたらした。植民地支配下のインドでも深刻な飢饉が発生した。病害や干ばつに加えて、貧困、土地所有、価格、政府の政策が被害を左右した。地域に食料があっても、買う手段や配給へのアクセスを失えば飢えは起こる。食料史は生産技術とともに、分配や救済の制度を問う歴史でもある。',
+        relatedCountryIds: ['uk', 'india', 'usa'],
+      },
+    ],
+    relatedCountryIds: ['mesopotamia', 'china', 'aztec', 'inca', 'india', 'southeast_asia', 'caliphate', 'portugal', 'swahili', 'spain', 'uk', 'france', 'usa'],
+    references: [
+      { title: 'The Columbian Exchange: Biological and Cultural Consequences of 1492', author: 'Alfred W. Crosby', publisher: 'Greenwood Press' },
+      { title: 'Sweetness and Power: The Place of Sugar in Modern History', author: 'Sidney W. Mintz', publisher: 'Viking' },
+    ],
+  },
+  {
+    id: 'women-rights',
+    title: '女性と権利の歴史',
+    icon: '⚖️',
+    tagline: '誰が歴史を語り、誰が政治に参加できたのか',
+    color: '#A45185',
+    colorTo: '#713358',
+    intro:
+      '国家や戦争を中心にした歴史では、女性たちの労働、知識、政治参加が見えにくくなることがある。だが、女性の境遇は時代・地域・身分によって異なり、一つの物語にはまとめられない。家族や職場での役割、財産への権利、教育、参政権をたどると、社会の仕組みそのものが見えてくる。権利の拡大も一直線に進んだのではなく、獲得と制限、排除と連帯を重ねてきた。',
+    sections: [
+      {
+        heading: '史料に見える女性——王権から日常生活まで',
+        body: 'ハトシェプストの統治、則天武后の即位、紫式部の文学は、女性が政治や文化に大きな足跡を残した例である。同時に、例外的な支配者や著名人だけでは、多くの人々の生活は分からない。契約文書、裁判記録、手紙、墓碑、考古資料を読むことで、商売、相続、育児、農業に携わった女性の姿も見えてくる。史料を残しやすい身分とそうでない身分の違いにも注意が必要である。',
+        relatedCountryIds: ['egypt', 'china', 'japan'],
+      },
+      {
+        heading: '革命の普遍性と限界——市民に含まれたのは誰か',
+        body: 'フランス革命で自由と平等が掲げられた一方、女性には男性と同じ政治的権利が認められなかった。オランプ・ド・グージュは1791年に「女性および女性市民の権利宣言」を著し、この矛盾を問うた。メアリ・ウルストンクラフトも教育と理性を根拠に女性の権利を論じた。こうした主張は、革命や啓蒙の言葉を受け取りながら、その適用範囲を広げようとする試みだった。',
+        relatedCountryIds: ['france', 'uk'],
+      },
+      {
+        heading: '働くこと、学ぶこと——工場と家庭のあいだ',
+        body: '産業化の時代、多くの女性が工場、家内労働、奉公、農業に従事した。賃金労働が増えても、家事やケアの負担がなくなったわけではない。日本の製糸・紡績業でも女性労働が大きな役割を果たした。女子教育や専門職への道が開かれる一方、階級や人種、植民地支配の有無によって機会は大きく異なった。「家庭の外に出たから解放された」という一つの基準だけでは捉えられない。',
+        relatedCountryIds: ['uk', 'japan', 'usa'],
+      },
+      {
+        heading: '参政権運動——異なる道筋と残された排除',
+        body: '19世紀から20世紀にかけて、請願、集会、出版、時には直接行動を通じて女性参政権が求められた。イギリスでは1918年に一定条件の女性へ選挙権が認められ、1928年に男性と同条件となった。アメリカでは1920年の憲法修正第19条後も、黒人女性らが実際に投票するには差別的な制度との闘いが続いた。日本では1945年の法改正を経て、翌年の総選挙で女性が初めて投票した。',
+        relatedCountryIds: ['uk', 'usa', 'japan'],
+      },
+      {
+        heading: '国際的な権利と日常——制度を変えた後の課題',
+        body: '1979年に国連で採択された女性差別撤廃条約は、政治、教育、雇用、家族など幅広い分野で差別の撤廃を求めた。各地の運動は植民地支配、人種差別、貧困への抵抗とも交差してきた。法的な平等が定められても、暴力、賃金格差、無償のケア労働の偏りは残りうる。誰の経験が「女性全体」の声として扱われるのかを問い続けることも、この歴史を読むうえで欠かせない。',
+        relatedCountryIds: ['india', 'usa', 'japan', 'france'],
+      },
+    ],
+    relatedCountryIds: ['egypt', 'china', 'japan', 'france', 'uk', 'usa', 'india'],
+    references: [
+      { title: 'Gender and the Politics of History', author: 'Joan Wallach Scott', publisher: 'Columbia University Press' },
+      { title: 'European Feminisms, 1700–1950: A Political History', author: 'Karen Offen', publisher: 'Stanford University Press' },
+    ],
+  },
+  {
+    id: 'migration',
+    title: '移動と移民の世界史',
+    icon: '🧭',
+    tagline: '国境を越える人々と、変わり続ける社会',
+    color: '#487DA4',
+    colorTo: '#2D516D',
+    intro:
+      '人の移動は世界史の例外ではなく、その基盤の一つである。交易や仕事、信仰、新たな暮らしを求めて旅立つ人がいる一方、奴隷化、戦争、迫害によって故郷を追われた人もいる。移動を自発的か強制的かの二つに完全に分けることは難しい。送り出す地域と受け入れる地域、移動する人と残る家族、そのすべての関係を見つめると、国家の枠だけでは捉えられない歴史が浮かび上がる。',
+    sections: [
+      {
+        heading: '交易路の人々——商人とディアスポラ',
+        body: 'シルクロードで活動したソグド商人、インド洋沿岸を結んだアラブ・ペルシア・インドの商人は、遠隔地に拠点や家族のつながりを築いた。言語、信仰、信用のネットワークは取引を支え、移住先の社会と結びつきながら新しい文化を生んだ。スワヒリ海岸の都市文化も、アフリカの社会を基盤に海を越える交流の中で育った。移住者を外から影響を運ぶだけの存在として扱わず、現地の人々との共同の歴史として見ることが大切である。',
+        relatedCountryIds: ['china', 'persia', 'india', 'swahili'],
+      },
+      {
+        heading: '強制移動——大西洋奴隷貿易が残したもの',
+        body: '16世紀以降、多数のアフリカの人々が奴隷化され、大西洋を越えてアメリカ大陸へ運ばれた。航海と労働の過程で多くの命が失われ、家族や共同体が引き裂かれた。一方、奴隷化された人々は抵抗し、信仰、言語、音楽、生活の知識を組み直して新たな共同体を作った。その文化の創造力を語ることは、移動を強いた暴力や、その後も続いた人種的支配を軽く扱うこととは両立しない。',
+        relatedCountryIds: ['portugal', 'spain', 'uk', 'france', 'usa'],
+      },
+      {
+        heading: '19世紀の労働移動——大洋を渡る暮らし',
+        body: '蒸気船や鉄道の発達は移動を容易にし、ヨーロッパからアメリカ大陸へ、中国やインドから東南アジアなどへ労働者が移動した。日本からハワイや南北アメリカへの移民も増えた。契約労働は賃金を得る機会をもたらした一方、債務や移動の制限によって強い拘束を伴う場合があった。送金、帰郷、家族の呼び寄せを通じて、移民は出身地との関係を保ち続けた。',
+        relatedCountryIds: ['china', 'india', 'southeast_asia', 'japan', 'usa', 'poland'],
+      },
+      {
+        heading: '国境を管理する国家——旅券と排除',
+        body: '近代国家は国籍、旅券、入国審査を整え、移動する人々を分類するようになった。アメリカの1882年中国人排斥法は、人種化された排除の代表例である。第一次世界大戦も旅券管理の強化を促した。国境管理はすべての人に同じように作用したわけではなく、人種、国籍、職業、性別によって通過のしやすさは異なった。「自由な移動」が誰に認められたかは、制度の歴史として問う必要がある。',
+        relatedCountryIds: ['usa', 'china', 'uk', 'france'],
+      },
+      {
+        heading: '難民と分断——故郷を失う経験をどう支えるか',
+        body: '世界大戦、迫害、国境の再編は多数の難民と避難民を生んだ。1947年のインド・パキスタン分離独立でも、宗教共同体間の暴力と大規模な移動が起きた。1951年の難民条約は保護の国際的な枠組みを定め、1967年の議定書が時間的・地理的制限を取り除く方向へ広げた。難民と移民は法的には異なる概念だが、一人の移動には安全と生活を求める複数の理由が重なりうる。',
+        relatedCountryIds: ['india', 'germany', 'poland', 'russia'],
+      },
+    ],
+    relatedCountryIds: ['china', 'persia', 'india', 'swahili', 'portugal', 'spain', 'uk', 'france', 'usa', 'southeast_asia', 'japan', 'poland', 'germany', 'russia'],
+    references: [
+      { title: 'Cultures in Contact: World Migrations in the Second Millennium', author: 'Dirk Hoerder', publisher: 'Duke University Press' },
+      { title: 'Melancholy Order: Asian Migration and the Globalization of Borders', author: 'Adam M. McKeown', publisher: 'Columbia University Press' },
+    ],
+  },
+
 ];
 
 export function getTheme(id: string): Theme | undefined {

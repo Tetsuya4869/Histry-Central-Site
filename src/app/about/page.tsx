@@ -30,7 +30,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen pb-20">
       <IOSNavBar title="編集方針" backHref="/" />
-      <main className="mx-auto max-w-3xl px-4">
+      <main id="main-content" className="mx-auto max-w-3xl px-4">
         <section className="ios-fade-up py-6">
           <h1 className="font-serif text-[30px] font-bold tracking-tight text-ios-text">
             編集方針

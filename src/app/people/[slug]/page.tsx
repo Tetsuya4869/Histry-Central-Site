@@ -48,7 +48,7 @@ export default function PersonPage({ params }: { params: { slug: string } }) {
         </div>
       </div>
 
-      <main className="mx-auto max-w-3xl px-4">
+      <main id="main-content" className="mx-auto max-w-3xl px-4">
         {/* 解説 */}
         <section className="ios-fade-up py-6">
           <div className="rounded-ios bg-ios-card p-5 text-[15px] leading-relaxed text-ios-text-2 shadow-ios">

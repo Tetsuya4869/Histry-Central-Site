@@ -140,3 +140,44 @@ body {
 .ios-fade-up {
   animation: ios-fade-up 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
+
+/* ホームの扉：既存のカードと明朝体に深い海色を添える。 */
+.history-hero {
+  background: radial-gradient(ellipse at 95% 12%, #306873 0%, transparent 58%), linear-gradient(125deg, #102a3b, #17484c);
+}
+.hero-orbit {
+  position: absolute;
+  border: 1px solid rgba(174, 226, 220, 0.16);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.hero-orbit-one { width: 430px; height: 430px; right: -190px; top: -120px; }
+.hero-orbit-two { width: 290px; height: 290px; right: -120px; top: -50px; }
+
+:focus-visible {
+  outline: 3px solid #0a84ff;
+  outline-offset: 3px;
+}
+.event-target:target {
+  background: var(--ios-card-2);
+  box-shadow: 0 0 0 4px rgba(10, 132, 255, 0.25);
+}
+.skip-link {
+  position: fixed;
+  top: -80px;
+  left: 12px;
+  z-index: 100;
+  border-radius: 12px;
+  background: var(--ios-card);
+  color: var(--ios-text);
+  padding: 12px 20px;
+}
+.skip-link:focus { top: 8px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

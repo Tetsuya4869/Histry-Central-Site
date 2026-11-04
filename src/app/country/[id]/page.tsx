@@ -54,7 +54,7 @@ export default function CountryPage({ params }: { params: { id: string } }) {
         </div>
       </div>
 
-      <main className="mx-auto max-w-3xl px-4">
+      <main id="main-content" className="mx-auto max-w-3xl px-4">
         {/* 概要（短文） */}
         <section className="ios-fade-up py-6">
           <div className="rounded-ios bg-ios-card p-4 text-[14px] leading-relaxed text-ios-text-2 shadow-ios">
@@ -122,6 +122,7 @@ export default function CountryPage({ params }: { params: { id: string } }) {
                 era={era}
                 color={country.color}
                 isLast={i === history.eras.length - 1}
+                eraIndex={i}
               />
             ))}
           </div>

@@ -1,6 +1,7 @@
 import type { Era } from '@/data/histories/types';
 import { formatYear } from '@/lib/timeline';
 import LinkedText from './LinkedText';
+import { eventAnchor } from '@/lib/events';
 
 const THEME_ICON: Record<string, string> = {
   政治: '⚖️',
@@ -14,13 +15,15 @@ export default function EraSection({
   era,
   color,
   isLast,
+  eraIndex,
 }: {
   era: Era;
   color: string;
   isLast: boolean;
+  eraIndex: number;
 }) {
   return (
-    <div className="relative flex gap-4">
+    <div id={`era-${eraIndex}`} className="relative flex gap-4 scroll-mt-20">
       {/* 縦タイムラインの軸 */}
       <div className="flex w-4 shrink-0 flex-col items-center">
         <span
@@ -76,7 +79,7 @@ export default function EraSection({
           {era.events && era.events.length > 0 && (
             <ul className="mt-3 space-y-1.5 border-t border-[var(--ios-separator)] pt-3">
               {era.events.map((ev, i) => (
-                <li key={i} className="flex gap-3 text-[13px]">
+                <li key={i} id={eventAnchor(eraIndex, i)} className="event-target flex scroll-mt-24 gap-3 rounded-md text-[13px]">
                   <span
                     className="w-14 shrink-0 text-right font-semibold tabular-nums"
                     style={{ color }}

@@ -13,7 +13,7 @@ export default function ThemesPage() {
   return (
     <div className="min-h-screen pb-16">
       <IOSNavBar title="テーマで読む世界史" backHref="/" />
-      <main className="mx-auto max-w-3xl px-4">
+      <main id="main-content" className="mx-auto max-w-3xl px-4">
         <section className="ios-fade-up py-6">
           <h2 className="font-serif text-[28px] font-bold tracking-tight text-ios-text">
             テーマで読む世界史
