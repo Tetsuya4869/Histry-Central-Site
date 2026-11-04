@@ -2,13 +2,12 @@
 
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
-import { buildSearchIndex, type SearchItem } from '@/lib/search';
+import type { SearchItem } from '@/lib/search';
 
-const KIND_ORDER: SearchItem['kind'][] = ['国・文明', 'テーマ', '人物', '用語'];
+const KIND_ORDER: SearchItem['kind'][] = ['国・文明', 'テーマ', '人物', '用語', '出来事'];
 
-export default function SearchClient() {
+export default function SearchClient({ index }: { index: SearchItem[] }) {
   const [q, setQ] = useState('');
-  const index = useMemo(() => buildSearchIndex(), []);
 
   const results = useMemo(() => {
     const query = q.trim().toLowerCase();
@@ -48,10 +47,11 @@ export default function SearchClient() {
             />
           </svg>
           <input
+            aria-label="サイト内のコンテンツを検索"
             autoFocus
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="国・人物・テーマ・用語を検索"
+            placeholder="国・人物・テーマ・用語・出来事を検索"
             className="w-full bg-transparent text-[16px] text-ios-text outline-none placeholder:text-ios-text-3"
           />
           {q && (

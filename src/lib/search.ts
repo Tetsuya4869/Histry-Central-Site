@@ -3,8 +3,10 @@ import { themes } from '@/data/themes';
 import { glossary } from '@/data/glossary';
 import { histories } from '@/data/histories';
 import { getAllPeople } from '@/lib/people';
+import { getAllEvents } from '@/lib/events';
+import { formatYear } from '@/lib/timeline';
 
-export type SearchKind = '国・文明' | 'テーマ' | '人物' | '用語';
+export type SearchKind = '国・文明' | 'テーマ' | '人物' | '用語' | '出来事';
 
 export interface SearchItem {
   kind: SearchKind;
@@ -62,6 +64,15 @@ export function buildSearchIndex(): SearchItem[] {
       href: `/glossary#${g.term}`,
       icon: '📖',
       keywords: `${g.term} ${g.definition} ${g.category}`,
+    });
+  }
+
+  for (const event of getAllEvents()) {
+    items.push({
+      kind: '出来事', title: event.text,
+      subtitle: `${formatYear(event.year)}年・${event.countryName}・${event.eraName}`,
+      href: event.href, icon: event.flag,
+      keywords: `${event.text} ${event.countryName} ${event.eraName} ${formatYear(event.year)}`,
     });
   }
 

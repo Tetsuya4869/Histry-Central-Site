@@ -21,6 +21,10 @@ import { germany } from './germany';
 import { spain } from './spain';
 import { russia } from './russia';
 import { southeastAsia } from './southeast_asia';
+import { ethiopia } from './ethiopia';
+import { swahili } from './swahili';
+import { portugal } from './portugal';
+import { poland } from './poland';
 
 export const histories: Record<string, CountryHistory> = {
   japan,
@@ -45,6 +49,10 @@ export const histories: Record<string, CountryHistory> = {
   spain,
   russia,
   southeast_asia: southeastAsia,
+  ethiopia,
+  swahili,
+  portugal,
+  poland,
 };
 
 export function getHistory(id: string): CountryHistory | undefined {

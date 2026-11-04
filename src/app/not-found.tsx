@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function NotFound() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
+    <main id="main-content" className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
       <div className="text-[56px]">🗺️</div>
       <h1 className="mt-4 text-[22px] font-bold text-ios-text">
         ページが見つかりません
@@ -16,6 +16,6 @@ export default function NotFound() {
       >
         年表にもどる
       </Link>
-    </div>
+    </main>
   );
 }

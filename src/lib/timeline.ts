@@ -47,11 +47,9 @@ export function generateTicks(): Tick[] {
     ticks.push({
       year: y,
       x: yearToX(y),
-      label: formatYear(y),
+      label: y === 0 ? '紀元' : formatYear(y),
       major: true,
     });
   }
-  // 西暦0(紀元)を強調目盛りとして追加
-  ticks.push({ year: 0, x: yearToX(0), label: '紀元', major: true });
   return ticks.sort((a, b) => a.x - b.x);
 }

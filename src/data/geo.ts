@@ -33,6 +33,10 @@ export const geo: Record<string, CivGeo> = {
   spain: { iso: 'es', x: 455.5, y: 354.7 },
   caliphate: { iso: 'sa', x: 601.5, y: 392.4 },
   southeast_asia: { iso: 'id', x: 806.3, y: 470 },
+  ethiopia: { iso: 'et', x: 588.5, y: 437.2 },
+  swahili: { iso: 'tz', x: 585.5, y: 480.2 },
+  portugal: { iso: 'pt', x: 452.9, y: 342.3 },
+  poland: { iso: 'pl', x: 528.5, y: 292.2 },
 };
 
 export function getGeo(id: string): CivGeo | undefined {

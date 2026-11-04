@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import IOSNavBar from '@/components/IOSNavBar';
+import ReferencesList from '@/components/ReferencesList';
 import { themes, getTheme } from '@/data/themes';
 import { getCountry } from '@/data/countries';
 
@@ -66,7 +67,7 @@ export default function ThemePage({ params }: { params: { id: string } }) {
         </div>
       </div>
 
-      <main className="mx-auto max-w-3xl px-4">
+      <main id="main-content" className="mx-auto max-w-3xl px-4">
         {/* 導入 */}
         <section className="ios-fade-up py-6">
           <div className="rounded-ios bg-ios-card p-5 shadow-ios">
@@ -105,6 +106,13 @@ export default function ThemePage({ params }: { params: { id: string } }) {
             <CountryChips ids={theme.relatedCountryIds} />
           </div>
         </section>
+        {theme.references && theme.references.length > 0 && (
+          <section className="pt-6">
+            <h2 className="rule-heading mb-3 px-1 font-serif text-[15px] font-bold">さらに読むための参考文献</h2>
+            <div className="rounded-ios bg-ios-card p-5 shadow-ios"><ReferencesList references={theme.references} /></div>
+            <p className="mt-3 px-1 text-[11px] leading-relaxed text-ios-text-3">理解を深めるための関連文献です。本文は概説であり、個々の記述を直接引用したものではありません。</p>
+          </section>
+        )}
       </main>
     </div>
   );
